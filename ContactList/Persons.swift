@@ -15,8 +15,12 @@ struct Persons {
     
     }
 
+
+
+
 extension Persons {
     static func getPerson() -> [Persons] {
+        
         [
             Persons(name: "Alberto", surname: "Ruiz", phone: "+79950991121", email: "1okol@mail.ru"),
             Persons(name: "Dave", surname: "Wincent", phone: "+79950991122", email: "2okol@mail.ru"),

@@ -77,14 +77,17 @@ class ContactListViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let contactDetailVC = segue.destination as? DetailContactViewController else {return}
+        guard let index = tableView.indexPathForSelectedRow else {return}
+        
+        let person = personList[index.row]
+        contactDetailVC.person = person
+        
     }
-    */
+
 
 }

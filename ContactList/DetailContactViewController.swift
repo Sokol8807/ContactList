@@ -9,21 +9,22 @@ import UIKit
 
 class DetailContactViewController: UIViewController {
 
+    @IBOutlet var nameLable: UILabel!
+    @IBOutlet var surnameLable: UILabel!
+    @IBOutlet var phoneLable: UILabel!
+    @IBOutlet var emailLable: UILabel!
+    
+    var person: Persons!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLable.text = person.name
+        surnameLable.text = person.surname
+        phoneLable.text = person.phone
+        emailLable.text = person.email
 
       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

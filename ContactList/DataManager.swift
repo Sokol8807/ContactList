@@ -22,8 +22,8 @@ final class DataManager {
 }
 
 let personData = DataManager(name: ["Anna", "Alex", "Denis", "Yra", "Bob"],
-                                    surname: ["Black", "Fox","Stone", "Solov","Crime"],
-                                    phone: ["+79558184871", "+79558184871",
-                                            "+79558184871", "+79558184871", "+79558184871"],
+                             surname: ["Black", "Fox","Stone", "Solov","Crime"],
+                             phone: ["+79558184871", "+79558184871",
+                                    "+79558184871", "+79558184871", "+79558184871"],
                              email: ["sad@mail.ru", "cool@mail.ru", "good@mail.ru"
                                      , "black@mail.ru", "first@mail.ru" ])
