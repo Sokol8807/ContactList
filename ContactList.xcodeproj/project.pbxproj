@@ -16,6 +16,7 @@
 		FD6B752528BE7602007851D4 /* Persons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B752428BE7602007851D4 /* Persons.swift */; };
 		FD6B752728BF1B04007851D4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B752628BF1B04007851D4 /* DataManager.swift */; };
 		FD6B752B28BF2109007851D4 /* DetailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B752A28BF2109007851D4 /* DetailContactViewController.swift */; };
+		FD6B752D28BF71B0007851D4 /* ContactListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B752C28BF71B0007851D4 /* ContactListDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FD6B752428BE7602007851D4 /* Persons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persons.swift; sourceTree = "<group>"; };
 		FD6B752628BF1B04007851D4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FD6B752A28BF2109007851D4 /* DetailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactViewController.swift; sourceTree = "<group>"; };
+		FD6B752C28BF71B0007851D4 /* ContactListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,51 @@
 		FD6B750D28BE7050007851D4 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				FD6B752228BE7194007851D4 /* ContactListViewController.swift */,
-				FD6B752A28BF2109007851D4 /* DetailContactViewController.swift */,
-				FD6B752428BE7602007851D4 /* Persons.swift */,
-				FD6B752628BF1B04007851D4 /* DataManager.swift */,
-				FD6B750E28BE7050007851D4 /* AppDelegate.swift */,
-				FD6B751028BE7050007851D4 /* SceneDelegate.swift */,
-				FD6B751428BE7050007851D4 /* Main.storyboard */,
+				FD6B752F28BF71F4007851D4 /* Models */,
+				FD6B752E28BF71C4007851D4 /* ViewControllers */,
+				FD6B753028BF7225007851D4 /* Storyboards */,
+				FD6B753128BF7244007851D4 /* Supports */,
 				FD6B751728BE7051007851D4 /* Assets.xcassets */,
-				FD6B751928BE7051007851D4 /* LaunchScreen.storyboard */,
 				FD6B751C28BE7051007851D4 /* Info.plist */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		FD6B752E28BF71C4007851D4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD6B752228BE7194007851D4 /* ContactListViewController.swift */,
+				FD6B752C28BF71B0007851D4 /* ContactListDetailViewController.swift */,
+				FD6B752A28BF2109007851D4 /* DetailContactViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FD6B752F28BF71F4007851D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD6B752628BF1B04007851D4 /* DataManager.swift */,
+				FD6B752428BE7602007851D4 /* Persons.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FD6B753028BF7225007851D4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FD6B751928BE7051007851D4 /* LaunchScreen.storyboard */,
+				FD6B751428BE7050007851D4 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FD6B753128BF7244007851D4 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				FD6B751028BE7050007851D4 /* SceneDelegate.swift */,
+				FD6B750E28BE7050007851D4 /* AppDelegate.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +184,7 @@
 			files = (
 				FD6B750F28BE7050007851D4 /* AppDelegate.swift in Sources */,
 				FD6B752728BF1B04007851D4 /* DataManager.swift in Sources */,
+				FD6B752D28BF71B0007851D4 /* ContactListDetailViewController.swift in Sources */,
 				FD6B751128BE7050007851D4 /* SceneDelegate.swift in Sources */,
 				FD6B752528BE7602007851D4 /* Persons.swift in Sources */,
 				FD6B752B28BF2109007851D4 /* DetailContactViewController.swift in Sources */,

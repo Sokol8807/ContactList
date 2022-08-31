@@ -1,46 +1,55 @@
 //
-//  ContactListViewController.swift
+//  ContactListDetailViewController.swift
 //  ContactList
 //
-//  Created by Ilya Sokolov on 30.08.2022.
+//  Created by Ilya Sokolov on 31.08.2022.
 //
 
 import UIKit
 
-class ContactListViewController: UITableViewController {
+class ContactListDetailViewController: UITableViewController {
 
-    
     private var personList = Persons.getPerson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        personList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        40
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
     }
 
    
-    
-    // MARK: - Table view data source
-//
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        0
-//    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        personList.count
-    }
-
-  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personName", for: indexPath)
-        
-        let person = personList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailPersonName", for: indexPath)
+        let person = personList[indexPath.section]
         
         var content = cell.defaultContentConfiguration()
-        content.text = person.name + " " + person.surname
+    
+        content.text = person.phone
+        content.image = UIImage(systemName: "phone")
         cell.contentConfiguration = content
+    
+        
         return cell
     }
+     
 
+    
+     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+         let header = personList[section].name + " " + personList[section].surname
+         return header
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,17 +86,14 @@ class ContactListViewController: UITableViewController {
     }
     */
 
+    /*
     // MARK: - Navigation
 
-   
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let contactDetailVC = segue.destination as? DetailContactViewController else {return}
-        guard let index = tableView.indexPathForSelectedRow else {return}
-        
-        let person = personList[index.row]
-        contactDetailVC.person = person
-        
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-
+    */
 
 }
