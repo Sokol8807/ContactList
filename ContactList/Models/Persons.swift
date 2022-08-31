@@ -12,26 +12,20 @@ struct Persons {
     let surname: String
     let phone: String
     let email: String
-    
-    }
-
-
-
+}
 
 extension Persons {
     static func getPerson() -> [Persons] {
+        var persons: [Persons] = []
+        let names = personData.name.shuffled()
+        let surnames = personData.surname.shuffled()
+        let phone = personData.phone.shuffled()
+        let emails = personData.email.shuffled()
         
-        [
-            Persons(name: "Alberto", surname: "Ruiz", phone: "+79950991121", email: "1okol@mail.ru"),
-            Persons(name: "Dave", surname: "Wincent", phone: "+79950991122", email: "2okol@mail.ru"),
-            Persons(name: "Bob", surname: "Dilan", phone: "+79950991123", email: "3okol@mail.ru"),
-            Persons(name: "Edna", surname: " Ann", phone: "+79950991124", email: "4okol@mail.ru"),
-            Persons(name: "Ilija", surname: "Djokovic", phone: "+79950991126", email: "5okol@mail.ru"),
-            Persons(name: "John", surname: "Baptiste", phone: "+79950991127", email: "6okol@mail.ru"),
-            Persons(name: "Vovka", surname: "Durov", phone: "+79950991128", email: "7okol@mail.ru"),
-            Persons(name: "Mac", surname: "Vaughn ", phone: "+79950991125", email: "8okol@mail.ru"),
-            Persons(name: "Metodi", surname: "Gallya", phone: "+79950991125", email: "9okol@mail.ru"),
-            Persons(name: "Veerus", surname: "Nightmare", phone: "+79950991125", email: "0okol@mail.ru")
-        ]
+        for index in 0..<names.count {
+            let person = Persons(name: names[index], surname: surnames[index], phone: phone[index], email: emails[index])
+            persons.append(person)
+        }
+        return persons
     }
 }

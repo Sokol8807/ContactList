@@ -21,17 +21,21 @@ class ContactListDetailViewController: UITableViewController {
         personList.count
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView,
+                            heightForHeaderInSection section: Int) -> CGFloat {
         40
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
         2
     }
 
    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detailPersonName", for: indexPath)
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailPersonName",
+                                                 for: indexPath)
         let person = personList[indexPath.section]
         
         var content = cell.defaultContentConfiguration()
@@ -46,7 +50,8 @@ class ContactListDetailViewController: UITableViewController {
      
 
     
-     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+     override func tableView(_ tableView: UITableView,
+                             titleForHeaderInSection section: Int) -> String? {
          let header = personList[section].name + " " + personList[section].surname
          return header
     }
