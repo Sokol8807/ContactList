@@ -9,27 +9,35 @@ import UIKit
 
 class ContactListViewController: UITableViewController {
 
+    
+    private var personList = Persons.getPerson()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+   
+    
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        0
-    }
+//
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       0
+        personList.count
     }
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personName", for: indexPath)
-
-    
-
+        
+        let person = personList[indexPath.row]
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = person.name + " " + person.surname
+        cell.contentConfiguration = content
         return cell
     }
 
