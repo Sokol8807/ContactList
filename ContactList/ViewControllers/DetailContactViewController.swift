@@ -7,15 +7,15 @@
 
 import UIKit
 
-class DetailContactViewController: UIViewController {
-
+final class DetailContactViewController: UIViewController {
+    // MARK: - IBOutlet
     @IBOutlet var nameLable: UILabel!
     @IBOutlet var surnameLable: UILabel!
     @IBOutlet var phoneLable: UILabel!
     @IBOutlet var emailLable: UILabel!
-    
+   
+    // MARK: - Public Properties
     var person: Persons!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,6 @@ class DetailContactViewController: UIViewController {
         surnameLable.text = person.surname
         phoneLable.text = person.phone
         emailLable.text = person.email
-
-      
     }
     
 }
