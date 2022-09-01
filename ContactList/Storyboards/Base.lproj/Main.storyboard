@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="375" y="844"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="qsy-fX-iRF">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BXf-XW-jra" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BXf-XW-jra" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cut-X4-wty">
                         <autoresizingMask key="autoresizingMask"/>

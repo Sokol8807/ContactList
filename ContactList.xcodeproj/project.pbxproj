@@ -17,6 +17,7 @@
 		FD6B752728BF1B04007851D4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B752628BF1B04007851D4 /* DataManager.swift */; };
 		FD6B752B28BF2109007851D4 /* DetailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B752A28BF2109007851D4 /* DetailContactViewController.swift */; };
 		FD6B752D28BF71B0007851D4 /* ContactListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B752C28BF71B0007851D4 /* ContactListDetailViewController.swift */; };
+		FD6B753328C00393007851D4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B753228C00393007851D4 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FD6B752628BF1B04007851D4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FD6B752A28BF2109007851D4 /* DetailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactViewController.swift; sourceTree = "<group>"; };
 		FD6B752C28BF71B0007851D4 /* ContactListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListDetailViewController.swift; sourceTree = "<group>"; };
+		FD6B753228C00393007851D4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		FD6B752E28BF71C4007851D4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD6B753228C00393007851D4 /* TabBarViewController.swift */,
 				FD6B752228BE7194007851D4 /* ContactListViewController.swift */,
 				FD6B752C28BF71B0007851D4 /* ContactListDetailViewController.swift */,
 				FD6B752A28BF2109007851D4 /* DetailContactViewController.swift */,
@@ -185,6 +188,7 @@
 				FD6B750F28BE7050007851D4 /* AppDelegate.swift in Sources */,
 				FD6B752728BF1B04007851D4 /* DataManager.swift in Sources */,
 				FD6B752D28BF71B0007851D4 /* ContactListDetailViewController.swift in Sources */,
+				FD6B753328C00393007851D4 /* TabBarViewController.swift in Sources */,
 				FD6B751128BE7050007851D4 /* SceneDelegate.swift in Sources */,
 				FD6B752528BE7602007851D4 /* Persons.swift in Sources */,
 				FD6B752B28BF2109007851D4 /* DetailContactViewController.swift in Sources */,

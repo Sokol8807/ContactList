@@ -10,12 +10,13 @@ import UIKit
 final class ContactListViewController: UITableViewController {
     
     // MARK: - Private Properties
-    private var personList = Persons.getPerson()
+    var personList = Persons.getPerson()
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         personList.count
+
     }
 
   
@@ -35,11 +36,16 @@ final class ContactListViewController: UITableViewController {
     // MARK: - Navigation
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard let contactDetailVC = segue.destination as? DetailContactViewController
-        else {return}
+        else {
+            return
+        }
+       
         guard let index = tableView.indexPathForSelectedRow else {return}
         
         let person = personList[index.row]
         contactDetailVC.person = person
-    }
+        
+    }   
 }

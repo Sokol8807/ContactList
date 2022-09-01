@@ -10,7 +10,7 @@ import UIKit
 class ContactListDetailViewController: UITableViewController {
 
     // MARK: - Private Properties
-    private var personList = Persons.getPerson()
+    var personList  = Persons.getPerson()
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
