@@ -19,12 +19,10 @@ final class ContactListViewController: UITableViewController {
 
     }
 
-  
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personName",
                                                  for: indexPath)
-        
         let person = personList[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
@@ -41,7 +39,6 @@ final class ContactListViewController: UITableViewController {
         else {
             return
         }
-       
         guard let index = tableView.indexPathForSelectedRow else {return}
         
         let person = personList[index.row]

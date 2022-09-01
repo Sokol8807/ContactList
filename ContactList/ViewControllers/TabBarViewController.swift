@@ -7,16 +7,16 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
-     
-    var personList = Persons.getPerson()
+final class TabBarViewController: UITabBarController {
+    // MARK: - Private Properties
+    private let personList = Persons.getPerson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers(personList)
-        
     }
     
+    // MARK: - Private Func
     private func setupViewControllers(_ person: [Persons]) {
   
         guard let viewControllers  = viewControllers else {return}
